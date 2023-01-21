@@ -6,6 +6,8 @@ import { images } from '../../constants';
 import './Footer.css';
 
 const Footer = () => (
+   
+
   <div className="app__footer section__padding" id="login">
     <FooterOverlay />
     <Newsletter />
@@ -39,10 +41,11 @@ const Footer = () => (
     </div>
 
     <div className="footer__copyright">
-      <p className="p__opensans">2023 Satyam kitchen. All Rights reserved.</p>
+      <p className="p__opensans"> {new Date().getFullYear()} Satyam kitchen. All Rights reserved.</p>
     </div>
 
   </div>
+  
 );
 
 export default Footer;
