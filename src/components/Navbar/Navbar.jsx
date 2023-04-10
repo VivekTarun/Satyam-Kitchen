@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdImageSearch, MdOutlineResturantMenu } from "react-icons/md"
 import { AiOutlineClose } from "react-icons/ai"
-
+import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 import images from '../../constants/images'
+
 
 const Navbar = () => {
 
@@ -14,21 +15,25 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className='app__navbar-logo'>
-        <img src={images.gericht} alt='app logo' />
+        <Link to = "/"><img src={images.gericht} alt='app logo' /></Link>
       </div>
 
       <ul className='app__navbar-links'>
         <li className='p__opensans'><a href='#home'>Home</a></li>
         <li className='p__opensans'><a href='#about'>About</a></li>
-        <li className='p__opensans'><a href='#menu'>Menu</a></li>
+        <li className='p__opensans'>
+          <Link to="/menu">Menu</Link>
+        </li>
         <li className='p__opensans'><a href='#awards'>Awards</a></li>
         <li className='p__opensans'><a href='#contact'>Contacts</a></li>
       </ul>
 
       <div className='app__navbar-login'>
-        <a href='#login' className='p__opensans'>Log In  /  Register</a>
+        {/* <a href='#login' className='p__opensans'>Log In  /  Register</a> */}
+        <Link to="/login" className='p__opensans'>Log In | Register</Link>
         <div />
-        <a href='/' className='p__opensans'>Book Table</a>
+        {/* <a href='/' className='p__opensans'>Book Table</a> */}
+        <Link className='p__opensans' to= "/booktable">Book Table</Link>
       </div>
 
 
@@ -42,16 +47,16 @@ const Navbar = () => {
             <AiOutlineClose fontSize={27} className='overlay__close' onClick={() => setToggleMenu(false)} />
 
             <ul className='app__navbar-smallscreen_links'>
-              <li className='p__opensans'><a href='#home'>Home</a></li>
+              <li className='p__opensans'><Link to = '/'>Home</Link></li>
               <li className='p__opensans'><a href='#about'>About</a></li>
-              <li className='p__opensans'><a href='#menu'>Menu</a></li>
+              <li className='p__opensans'><Link to ='/menu'>Menu</Link></li>
               <li className='p__opensans'><a href='#awards'>Awards</a></li>
               <li className='p__opensans'><a href='#contacts'>Contacts</a></li>
             </ul>
 
           </div>
         )}
-        
+
       </div>
 
     </nav>

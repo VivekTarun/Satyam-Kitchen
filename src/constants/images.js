@@ -20,6 +20,14 @@ import award05 from '../assets/award05.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
+import menu1 from '../assets/menu/menu01.jpg';
+import menu2 from '../assets/menu/menu02.jpg';
+import menu3 from '../assets/menu/menu03.jpg';
+import menu4 from '../assets/menu/menu04.jpg';
+import menu5 from '../assets/menu/menu05.jpg';
+import menu6 from '../assets/menu/menu06.jpg';
+import menu7 from '../assets/menu/menu07.jpg';
+import menu8 from '../assets/menu/menu08.jpg';
 
 export default {
   bg,
@@ -44,4 +52,13 @@ export default {
   sign,
   quote,
   gericht,
+  menu1,
+  menu2,
+  menu3,
+  menu4,
+  menu5,
+  menu6,
+  menu7,
+  menu8
+  
 };
